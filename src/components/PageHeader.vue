@@ -1,6 +1,7 @@
 <template>
-<img alt="Lasertek Header" src="../assets/images/headerImage.jpeg">
-<h1> This is Page Header </h1>
+<h1>
+  <img class="LasertekHeader" src="../assets/images/headerImage.jpeg">
+</h1>
 </template>
 
 <script lang="ts">
@@ -13,4 +14,13 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  IMG.LasertekHeader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  h1 {
+    width: 100%;
+
+  }
 </style>

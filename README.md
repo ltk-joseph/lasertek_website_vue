@@ -25,5 +25,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### Joseph Custom Notes here
+0. prerequisit
+    - install node.js
+    - install vue
 1. Project Creation
     - vue create lasertek_website_vue
+    - npm install @vue/cli -g
+2. Multilanguage support 
+    - Internationalization plugin - vue I18n
+    - npm install vue-i18n
+    - vue add i18n
