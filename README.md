@@ -34,4 +34,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. Multilanguage support 
     - Internationalization plugin - vue I18n
     - npm install vue-i18n
-    - vue add i18n
+    - vue add vue-i18n
+    - set globalInjection: true
+    - (TODO) - create multiple files if we have too much text
+99. (Todo) - Dockerise
+100. Deployment
+    - npm run build
+    - serve -s dist
+
+
+### References:
+    - vue I18n tutorial: https://www.youtube.com/watch?v=CFGjn3yKMNc&ab_channel=AndreMadarang
+    - changing locale https://vue-i18n.intlify.dev/guide/essentials/scope.html#global-scope-2

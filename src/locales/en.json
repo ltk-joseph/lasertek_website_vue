@@ -1,3 +1,7 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "about": "english abouts page",
+  "nav": {
+    "features": "feature 1"
+  }
 }

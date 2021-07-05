@@ -1,3 +1,7 @@
 {
-    "message": "你好 i18n !!"
-  }
+    "message": "你好 i18n !!",
+    "about": "中文 about page",
+    "nav": {
+      "features": "東西"
+    }
+}
