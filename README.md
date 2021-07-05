@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Joseph Custom Notes here
+1. Project Creation
+    - vue create lasertek_website_vue
