@@ -1,4 +1,5 @@
 <template>
+<img alt="Lasertek Header" src="../assets/images/headerImage.jpeg">
 <h1> This is Page Header </h1>
 </template>
 
