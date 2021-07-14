@@ -1,29 +1,91 @@
 <template>
-<h1>
-  <img class="LasertekHeader" src="../assets/images/headerImage.jpeg">
-  <select v-model="$i18n.locale">
-    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
-  </select>
-</h1>
+  <header>
+    <a class="header_logo" href="/">
+      <img
+        class="LasertekHeader"
+        src="../assets/images/header/lasertek_logo.svg"
+      />
+    </a>
+    <nav>
+      <div id="language">
+        |
+        <a
+          v-for="locale in $i18n.availableLocales"
+          :key="`locale-${locale}`"
+          v-on:click="changeLanguage(`${locale}`)"
+        >
+          {{ language[locale] }} |
+        </a>
+      </div>
+      <div id="router-link">
+        <router-link to="/about">{{ $t("header.about") }}</router-link> |
+        <router-link to="/products">{{ $t("header.products") }}</router-link> |
+        <router-link to="/news">{{ $t("header.news") }}</router-link> |
+        <router-link to="/social_responsibilities">{{
+          $t("header.social_responsibilities")
+        }}</router-link>
+        |
+        <router-link to="/investment_services">{{
+          $t("header.investment_services")
+        }}</router-link>
+        |
+        <router-link to="/management">{{
+          $t("header.management")
+        }}</router-link>
+        | <router-link to="/hr">{{ $t("header.hr") }}</router-link> |
+        <router-link to="/staff">{{ $t("header.staff") }}</router-link> |
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
+import { defineComponent } from "vue";
 export default defineComponent({
-  name: 'PageHeader',
+  name: "PageHeader",
+  data() {
+    return {
+      language: {
+        en: "EN",
+        zh: "繁體",
+      },
+    };
+  },
+  methods: {
+    changeLanguage: function (language: string) {
+      this.$i18n.locale = language;
+    },
+  },
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  IMG.LasertekHeader {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+header {
+  border-bottom: 1px solid rgb(107, 107, 107);
+  display: flex;
 }
-  h1 {
-    width: 100%;
 
-  }
+nav {
+  position: relative;
+  margin-left: auto;
+}
+
+#language {
+  font-size: 0.7em;
+  /* margin: 8px 30px -4px 0px; */
+  letter-spacing: 10px;
+  text-align: right;
+}
+#router-link {
+  margin-top: 3%;
+}
+#router-link a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+#router-link a.router-link-exact-active {
+  color: #db1313;
+}
 </style>

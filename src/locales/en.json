@@ -1,6 +1,18 @@
 {
-  "message": "hello i18n !!",
-  "about": "english abouts page",
+  "header": {
+    "about": "About",
+    "products": "Products",
+    "news": "News",
+    "social_responsibilities": "Social Responsibilities",
+    "investment_services": "Investment Services",
+    "management": "Management",
+    "hr": "Human Resources",
+    "staff": "Staff"
+  },
+  "footer": {
+    "privacy": "privacy and policy",
+    "locations": "our locatins"
+  },
   "nav": {
     "features": "feature 1"
   }

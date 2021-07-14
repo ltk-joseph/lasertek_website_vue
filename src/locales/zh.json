@@ -1,7 +1,19 @@
 {
-    "message": "你好 i18n !!",
-    "about": "中文 about page",
-    "nav": {
-      "features": "東西"
-    }
+  "header": {
+    "about": "關於雷科",
+    "products": "產品服務",
+    "news": "最新消息",
+    "social_responsibilities": "社會責任",
+    "investment_services": "投資服務",
+    "management": "公司治理",
+    "hr": "人資專區",
+    "staff": "員工專區"
+  },
+  "footer": {
+    "privacy": "隱私權政策",
+    "locations": "營業據點"
+  },
+  "nav": {
+    "features": "東西"
+  }
 }
