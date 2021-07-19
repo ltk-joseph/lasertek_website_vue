@@ -27,13 +27,217 @@
         "details": "ISO, 企業獲獎認證"
       }
     },
-    "products": "產品服務",
+    "products": {
+      "mainHeading": "產品服務",
+      "SMT": {
+        "subHeading": "SMT部門",
+        "subDeptartment": [
+          {
+            "product": "檢測設備",
+            "subProducts": ["非接觸式掃描儀", "條碼光學檢察機"]
+          },
+          {
+            "product": "各式迴焊爐 / 溫度紀錄器",
+            "subProducts": ["迴焊爐", "燒成爐", "乾燥爐", "溫度記錄器" ]
+          },
+          {
+            "product": "雷射設備",
+            "subProducts": []
+          },
+          {
+            "product": "Services",
+            "subProducts": []
+          }
+        ]
+      },
+      "SMD": {
+        "subHeading": "SMD部門",
+        "subDeptartment": [
+          {
+            "product": "SMD產品",
+            "subProducts": []
+          },
+          {
+            "product": "SMD製程設備",
+            "subProducts": []
+          },
+          {
+            "product": "SMD製程備品",
+            "subProducts": []
+          },
+          {
+            "product": "Services",
+            "subProducts": []
+          }
+        ]
+      },
+      "Laser": {
+        "subHeading": "雷射部門",
+        "subDeptartment": [
+          {
+            "product": "被動元件產業",
+            "subProducts": ["Laser Trimmer-Thick Film Trimmer", "Laser Trimmer-Thin Film Trimmer", "Laser Trimmer-Functional Trimmer", "Laser Scribing"]
+          },
+          {
+            "product": "PCB / FPCB產業",
+            "subProducts": []
+          },
+          {
+            "product": "半導體產業",
+            "subProducts": []
+          },
+          {
+            "product": "光電產業",
+            "subProducts": []
+          },
+          {
+            "product": "Services",
+            "subProducts": []
+          }
+        ]
+      },
+      "Renewable": {
+        "subHeading": "能源部門",
+        "subDeptartment": [
+          {
+            "product": "LED室內燈系列",
+            "subProducts": []
+          },
+          {
+            "product": "LED室外燈系列",
+            "subProducts": []
+          },
+          {
+            "product": "LED特殊燈具",
+            "subProducts": []
+          },
+          {
+            "product": "空氣清淨機",
+            "subProducts": []
+          },
+          {
+            "product": "濾網",
+            "subProducts": []
+          },
+          {
+            "product": "Services",
+            "subProducts": []
+          }
+        ]
+      }
+    },
     "news": "最新消息",
-    "social_responsibilities": "社會責任",
-    "investment_services": "投資服務",
-    "management": "公司治理",
-    "hr": "人資專區",
-    "staff": "員工專區"
+    "social_responsibilities": {
+      "mainHeading": "社會責任",
+      "social_involvements": {
+        "heading": "社會參與",
+        "details": "雷科ＣＳＲ企業社會責任"
+      },
+      "stakeholder": {
+        "heading": "利害關係人",
+        "details": "利害關係人、檢舉信箱、檢舉窗口"
+      },
+      "csr_report": {
+        "heading": "CSR報告",
+        "details": "CSR報告揭露與利害關係人"
+      }
+    },
+    "investment_services": {
+      "mainHeading": "投資服務",
+      "financial_information": {
+        "heading": "財務資訊",
+        "details": "財務資訊、股價、股利"
+      },
+      "shareholders_information": {
+        "heading": "股東會資料",
+        "details": "年報、開會通知＆檔案下載"
+      },
+      "investment_service": {
+        "heading": "投資服務窗口",
+        "details": "投資諮詢聯絡方式"
+      },
+      "investment_q_n_a": {
+        "heading": "問答集",
+        "details": "公司相關資訊Ｑ＆Ａ"
+      }
+    },
+    "management": {
+      "mainHeading": "公司治理",
+      "corporate_structure": {
+        "heading": "公司治理架構",
+        "details": "董事會為雷科公司治理組織架構"
+      },
+      "boards": {
+        "heading": "董事會",
+        "details": "組織職責、董事長績效評估、重要決議"
+      },
+      "internal_audit": {
+        "heading": "內部稽核",
+        "details": "內部稽核為獨立單位，直接隸屬董事會"
+      },
+      "corporate_information": {
+        "heading": "相關規則與資訊",
+        "details": "公司相關章程與守則、辦法說明"
+      }
+    },
+    "hr": {
+      "mainHeading": "人資專區",
+      "hr_policy": {
+        "heading": "人權政策",
+        "details": "保障勞工組織與集體談判的權力"
+      },
+      "welfare": {
+        "heading": "福利薪酬",
+        "details": "分紅/年終獎金/福利金補助/節日獎金"
+      },
+      "training_development": {
+        "heading": "培育與發展",
+        "details": "公司提供完整的訓練規劃"
+      },
+      "retirement": {
+        "heading": "退休制度",
+        "details": "依「勞動基準法」規定實行"
+      },
+      "hr_faq": {
+        "heading": "常見問題",
+        "details": "相關工作規定與下載地圖"
+      },
+      "job_opportunities": {
+        "heading": "現有職缺",
+        "details": "詳情請至104、1111、EMAIL"
+      },
+      "interview_process": {
+        "heading": "招募流程",
+        "details": "雷科招募人員流程說明"
+      }
+    },
+    "staff": {
+      "mainHeading": "員工專區",
+      "mail": {
+        "heading": "員工webmail",
+        "details": "雷科網路郵局WEBEMAIL"
+      },
+      "overseas_video": {
+        "heading": "國外旅遊",
+        "details": "國外員工旅遊影片"
+      },
+      "domestic_video": {
+        "heading": "國內旅遊",
+        "details": "國內員工旅遊影片"
+      },
+      "employee_factory_day": {
+        "heading": "家庭日&廠慶",
+        "details": "廠慶活動紀錄影片"
+      },
+      "year_end_event": {
+        "heading": "年終尾牙",
+        "details": "年終活動紀錄影片"
+      },
+      "other_event": {
+        "heading": "其他活動",
+        "details": "其他公司＆同仁活動"
+      }
+    }
   },
   "footer": {
     "terms_conditions": "隱私權政策",

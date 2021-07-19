@@ -19,22 +19,6 @@
       </div>
       <div id="menu">
         <NavigationBar></NavigationBar>
-
-        <router-link to="/products">{{ $t("header.products") }}</router-link> |
-        <router-link to="/news">{{ $t("header.news") }}</router-link> |
-        <router-link to="/social_responsibilities">{{
-          $t("header.social_responsibilities")
-        }}</router-link>
-        |
-        <router-link to="/investment_services">{{
-          $t("header.investment_services")
-        }}</router-link>
-        |
-        <router-link to="/management">{{
-          $t("header.management")
-        }}</router-link>
-        | <router-link to="/hr">{{ $t("header.hr") }}</router-link> |
-        <router-link to="/staff">{{ $t("header.staff") }}</router-link> |
       </div>
     </nav>
   </header>

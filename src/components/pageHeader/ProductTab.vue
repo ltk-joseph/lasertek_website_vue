@@ -1,5 +1,5 @@
 <template>
-    <a @mouseover="isHovered = true" @mouseleave="isHovered = false">
+    <div @mouseover="isHovered = true" @mouseleave="isHovered = false">
 
         <a>{{ $t(getMainHeader) }} </a>
         <ul id="subheadings" v-if="isHovered" @click="isHovered = false">
@@ -10,14 +10,14 @@
                 </router-link>
             </li>
         </ul>
-    </a>
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "NavigationTab",
+    name: "ProductTab",
     props: {
         reference: String,
         subHeading: Array
