@@ -37,6 +37,26 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - vue add vue-i18n
     - set globalInjection: true
     - (TODO) - create multiple files if we have too much text
+3. Note for Design
+    - responsvie - when size of window changes, the layout still looks good
+        - Note: Bootstrap uses 12 column grid
+4. Notes for Vue
+    - options api - building vue apps / components 
+        - passing / setting various options in the config object of the vue instanst
+        - i.e. data(), methods(), computed(), watchers()
+        - limiataions / issue with building bigger vue apps
+            - code that  belongs to gether logically is split up across multiple options
+            - Re-using logic across omponents can be tricky or cumbersome
+        - When to use METHODS
+            - To call a function when an event happen in the DOM
+            - To call a function from the computed or watchers when something happens in your component.
+            - You need to pass parameter
+        - When to use COMPUTED PROPERTIES
+            - You need to compose new data from existing data sources
+            - You need to reference a value directly in your template
+            - You call the same function more than once in your templat
+    - composition api - merges data(), methods(), computed() method into a setup() method
+        - can still add to your component config object
 99. (Todo) - Dockerise
 100. Deployment
     - npm run build

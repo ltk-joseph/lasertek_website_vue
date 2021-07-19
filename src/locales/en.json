@@ -1,6 +1,33 @@
 {
   "header": {
-    "about": "About",
+    "abouts": {
+      "mainHeading": "about",
+      "aboutUs": {
+        "heading": "About Us",
+        "details": "date / asset / address",
+        "url": "/aboutUs"
+      },
+      "history": {
+        "heading": "Company History",
+        "details": "historical diary"
+      },
+      "retrospect": {
+        "heading": "retrospect",
+        "details": "goal / value / culture / quality governanace"
+      },
+      "team": {
+        "heading": "team",
+        "details": "CEO, Executives"
+      },
+      "locations": {
+        "heading": "locations",
+        "details": "global office contacts"
+      },
+      "certifications": {
+        "heading": "certifications",
+        "details": "ISO, Corporate Awards"
+      }
+    },
     "products": "Products",
     "news": "News",
     "social_responsibilities": "Social Responsibilities",
@@ -10,7 +37,7 @@
     "staff": "Staff"
   },
   "footer": {
-    "privacy": "privacy and policy",
+    "terms_conditions": "terms and conditions",
     "locations": "our locatins"
   },
   "nav": {

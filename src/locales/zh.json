@@ -1,6 +1,32 @@
 {
   "header": {
-    "about": "關於雷科",
+    "abouts": {
+      "mainHeading": "關於雷科",
+      "aboutUs": {
+        "heading": "公司簡介",
+        "details": "雷科成立日期｜資本額｜地址"
+      },
+      "history": {
+        "heading": "公司沿革",
+        "details": "雷科年代大事件記事"
+      },
+      "retrospect": {
+        "heading": "公司願景",
+        "details": "使命｜價值觀｜公司文化｜品質政策"
+      },
+      "team": {
+        "heading": "經營團隊",
+        "details": "董事長, 總經理簡介"
+      },
+      "locations": {
+        "heading": "營業據點",
+        "details": "全球辦公室聯絡方式"
+      },
+      "certifications": {
+        "heading": "企業認證",
+        "details": "ISO, 企業獲獎認證"
+      }
+    },
     "products": "產品服務",
     "news": "最新消息",
     "social_responsibilities": "社會責任",
@@ -10,7 +36,7 @@
     "staff": "員工專區"
   },
   "footer": {
-    "privacy": "隱私權政策",
+    "terms_conditions": "隱私權政策",
     "locations": "營業據點"
   },
   "nav": {

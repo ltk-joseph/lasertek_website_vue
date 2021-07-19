@@ -6,7 +6,7 @@
         雷科股份有限公司 |
         <a
           href="http://www.lasertek.com.tw/lasertek/company_privacy_policy.php"
-          >{{ $t("footer.privacy") }}</a
+          >{{ $t("footer.terms_conditions") }}</a
         >
       </p>
     </div>

@@ -17,8 +17,9 @@
           {{ language[locale] }} |
         </a>
       </div>
-      <div id="router-link">
-        <router-link to="/about">{{ $t("header.about") }}</router-link> |
+      <div id="menu">
+        <NavigationBar></NavigationBar>
+
         <router-link to="/products">{{ $t("header.products") }}</router-link> |
         <router-link to="/news">{{ $t("header.news") }}</router-link> |
         <router-link to="/social_responsibilities">{{
@@ -41,8 +42,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import NavigationBar from "@/components/pageHeader/NavigationBar.vue"; // @ is an alias to /src
 export default defineComponent({
   name: "PageHeader",
+  components: {
+    NavigationBar
+  },
   data() {
     return {
       language: {
@@ -76,16 +81,5 @@ nav {
   /* margin: 8px 30px -4px 0px; */
   letter-spacing: 10px;
   text-align: right;
-}
-#router-link {
-  margin-top: 3%;
-}
-#router-link a {
-  font-size: 16px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-#router-link a.router-link-exact-active {
-  color: #db1313;
 }
 </style>
