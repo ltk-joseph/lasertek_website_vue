@@ -17,9 +17,7 @@
           {{ language[locale] }} |
         </a>
       </div>
-      <div id="menu">
-        <NavigationBar></NavigationBar>
-      </div>
+      <NavigationBar></NavigationBar>
     </nav>
   </header>
 </template>

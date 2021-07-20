@@ -1,41 +1,49 @@
 <template>
-    <div>
+    <div class="navBar">
         <NavigationTab 
             :reference=aboutsTab.refernece
             :subHeading=aboutsTab.subHeading>
-        </NavigationTab> | 
-        <router-link to="/products">{{ $t("header.products.mainHeading") }}</router-link>
-        <router-link to="/news">{{ $t("header.news") }}</router-link>
+        </NavigationTab>
+        <ProductTab 
+            :reference=productTab.reference
+            :departments=productTab.departments>
+        </ProductTab>
+        <a>
+            <router-link to="/news">
+                {{ $t("header.news") }}
+            </router-link>
+        </a>
         <NavigationTab 
             :reference=socialRespTab.refernece
             :subHeading=socialRespTab.subHeading>
-        </NavigationTab> | 
+        </NavigationTab>
         <NavigationTab 
             :reference=investServicesTab.refernece
             :subHeading=investServicesTab.subHeading>
-        </NavigationTab> | 
+        </NavigationTab> 
         <NavigationTab 
             :reference=managementTab.refernece
             :subHeading=managementTab.subHeading>
-        </NavigationTab> | 
+        </NavigationTab>
         <NavigationTab 
             :reference=humanResourceTab.refernece
             :subHeading=humanResourceTab.subHeading>
-        </NavigationTab> | 
+        </NavigationTab>
         <NavigationTab 
             :reference=staffTab.refernece
             :subHeading=staffTab.subHeading>
-        </NavigationTab> | 
+        </NavigationTab> 
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavigationTab from "./NavigationTab.vue"
+import ProductTab from "./ProductTab.vue"
 export default defineComponent({
     name: "NavigationBar",
     components: {
-        NavigationTab
+        NavigationTab, ProductTab
     },
     data() {
         return {
@@ -44,8 +52,21 @@ export default defineComponent({
                 subHeading: ["aboutUs", "history", "retrospect", "team", "locations", "certifications"]
             },
             productTab: {
-                department: "header.products",
-                subDeptartment: []
+                reference: "header.products",
+                departments: [
+                    { department: "SMT",
+                      productCount: [2,4,0,0]
+                    },
+                    { department: "SMD",
+                      productCount: [0,0,0,0]
+                    },
+                    { department: "Laser",
+                      productCount: [4,0,0,0,0]
+                    },
+                    { department: "Renewable",
+                      productCount: [0,0,0,0,0,0]
+                    }
+                ]
             },
             socialRespTab: {
                 refernece: "header.social_responsibilities",
@@ -74,18 +95,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#menu {
+.navBar {
+  overflow: hidden;
   margin-top: 3%;
 }
-#menu a {
-  font-size: 16px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-#menu a.router-link-exact-active {
+.navBar a.router-link-exact-active {
   color: #db1313;
 }
-#subheadings {
-    list-style-type:none;
+
+/* add background to navtab on hover */
+a:hover {
+    color: crimson;
 }
 </style>

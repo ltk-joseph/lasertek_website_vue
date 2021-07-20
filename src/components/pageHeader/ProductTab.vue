@@ -1,41 +1,47 @@
 <template>
-    <div @mouseover="isHovered = true" @mouseleave="isHovered = false">
-
+    <a class="prodTab" @click="isClicked = !isClicked">
         <a>{{ $t(getMainHeader) }} </a>
-        <ul id="subheadings" v-if="isHovered" @click="isHovered = false">
-            <li v-for="item in getSubHeading" :key="item">
-                <router-link :to="item">
-                    {{ $t([this.reference, ".",item,".heading"].join('')) }}
-                <p>{{ $t([this.reference, ".",item,".details"].join('')) }} </p>
+        <div class="dropdown" v-if="isClicked">
+            <div class="dropdown-content" v-for="dept in getDepartment" :key="dept">
+                <router-link :to="dept.department">
+                    <h3>{{ $t([reference, ".", dept.department, ".subHeading"].join('')) }} </h3>
                 </router-link>
-            </li>
-        </ul>
-    </div>
+                <div class="dropdown-two" v-for="(item,index) in dept.productCount" :key="index">
+                    <h4> {{$t([reference, '.', dept.department ,'.subDepartment[', index ,'].product'].join(''))}}</h4>
+                    <div class="dropdown-two-content" v-for="i in item" :key="i">
+                        <p> {{$t([reference, '.', dept.department ,'.subDepartment[', index ,'].subProducts[',i - 1,']'].join(''))}}</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <fa icon ="chevron-right" v-if="isClicked"/>
+        <fa icon ="chevron-down" v-else/>
+    </a>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
 export default defineComponent({
     name: "ProductTab",
     props: {
         reference: String,
-        subHeading: Array
+        departments: Array
     },
-
     computed: {
         getMainHeader(): string {
             if (!this.reference) return "headerNotFound";         // ✅ Return an empty array if undefined
             return this.reference + ".mainHeading"
         },
-        getSubHeading(): Array<string> {
-            if (!this.subHeading) return ['SubheadingNotFound'];
-            return this.subHeading as string[]
+        getDepartment(): unknown {
+            console.log(this.departments)
+            return this.departments
         }
     },
     data() {
         return {
-            isHovered: "false"
+            isClicked: false
         }
     }
 })

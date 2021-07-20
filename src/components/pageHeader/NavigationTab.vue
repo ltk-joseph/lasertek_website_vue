@@ -1,16 +1,18 @@
 <template>
-    <a @mouseover="isHovered = true" @mouseleave="isHovered = false">
-
-        <a>{{ $t(getMainHeader) }} </a>
-        <ul id="subheadings" v-if="isHovered" @click="isHovered = false">
-            <li v-for="item in getSubHeading" :key="item">
+    <a class="navtab" @click="isClicked = !isClicked">
+        {{ $t(getMainHeader) }}
+        <div class="dropdown" v-if="isClicked">
+            <div class="dropdown-content" v-for="item in getSubHeading" :key="item">
                 <router-link :to="item">
-                    {{ $t([this.reference, ".",item,".heading"].join('')) }}
-                <p>{{ $t([this.reference, ".",item,".details"].join('')) }} </p>
+                    <h3>{{ $t([reference, ".",item,".heading"].join('')) }} </h3>
+                    <p>{{ $t([reference, ".",item,".details"].join('')) }} </p>
                 </router-link>
-            </li>
-        </ul>
+            </div>
+        </div>
+        <fa icon ="chevron-right" v-if="isClicked"/>
+        <fa icon ="chevron-down" v-else/>
     </a>
+
 </template>
 
 <script lang="ts">
@@ -25,7 +27,7 @@ export default defineComponent({
 
     computed: {
         getMainHeader(): string {
-            if (!this.reference) return "headerNotFound";         // ✅ Return an empty array if undefined
+            if (!this.reference) return "headerNotFound";
             return this.reference + ".mainHeading"
         },
         getSubHeading(): Array<string> {
@@ -35,8 +37,34 @@ export default defineComponent({
     },
     data() {
         return {
-            isHovered: "false"
+            isClicked: false
         }
     }
 })
 </script>
+
+<style scoped>
+
+/* links inside the navbar */
+.navtab {
+    /* float: left;
+    text-align: center; */
+}
+/* dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* add background to navtab on hover */
+a:hover {
+    color: crimson;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    /* display: none; */
+    /* position: absolute; */
+    z-index: 1;
+}
+</style>

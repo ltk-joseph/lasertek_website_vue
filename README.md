@@ -40,7 +40,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 3. Note for Design
     - responsvie - when size of window changes, the layout still looks good
         - Note: Bootstrap uses 12 column grid
-4. Notes for Vue
+4. Font Awesome - Icons
+    - Source https://github.com/FortAwesome/vue-fontawesome
+    - fontawesome-svg-core - functions to import icons
+    - free-solid-svg-icons - actual icons
+        - syntax
+            -<fa icon="coffee" />
+            -<fa :icon="["fas','coffee']"/>
+    - npm install other free icons i.e. brand -> import fab
+        - library.add(fas, fab) in main.ts
+        - syntax
+            - <fa :icon="['fab', 'youtube']">
+98. Notes for Vue
     - options api - building vue apps / components 
         - passing / setting various options in the config object of the vue instanst
         - i.e. data(), methods(), computed(), watchers()

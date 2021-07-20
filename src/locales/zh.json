@@ -31,7 +31,7 @@
       "mainHeading": "產品服務",
       "SMT": {
         "subHeading": "SMT部門",
-        "subDeptartment": [
+        "subDepartment": [
           {
             "product": "檢測設備",
             "subProducts": ["非接觸式掃描儀", "條碼光學檢察機"]
@@ -52,7 +52,7 @@
       },
       "SMD": {
         "subHeading": "SMD部門",
-        "subDeptartment": [
+        "subDepartment": [
           {
             "product": "SMD產品",
             "subProducts": []
@@ -73,7 +73,7 @@
       },
       "Laser": {
         "subHeading": "雷射部門",
-        "subDeptartment": [
+        "subDepartment": [
           {
             "product": "被動元件產業",
             "subProducts": ["Laser Trimmer-Thick Film Trimmer", "Laser Trimmer-Thin Film Trimmer", "Laser Trimmer-Functional Trimmer", "Laser Scribing"]
@@ -98,7 +98,7 @@
       },
       "Renewable": {
         "subHeading": "能源部門",
-        "subDeptartment": [
+        "subDepartment": [
           {
             "product": "LED室內燈系列",
             "subProducts": []
