@@ -1,18 +1,17 @@
 <template>
     <a class="navtab" @click="isClicked = !isClicked">
         {{ $t(getMainHeader) }}
-        <div class="dropdown" v-if="isClicked">
-            <div class="dropdown-content" v-for="item in getSubHeading" :key="item">
+        <ul class="dropdown" v-if="isClicked">
+            <li class="dropdown-content" v-for="item in getSubHeading" :key="item">
                 <router-link :to="item">
-                    <h3>{{ $t([reference, ".",item,".heading"].join('')) }} </h3>
-                    <p>{{ $t([reference, ".",item,".details"].join('')) }} </p>
+                    <h3 class="dropdown-title">{{ $t([reference, ".",item,".heading"].join('')) }} </h3>
+                    <p class="dropdown-paragraph">{{ $t([reference, ".",item,".details"].join('')) }} </p>
                 </router-link>
-            </div>
-        </div>
+            </li>
+        </ul>
         <fa icon ="chevron-right" v-if="isClicked"/>
         <fa icon ="chevron-down" v-else/>
     </a>
-
 </template>
 
 <script lang="ts">
@@ -50,10 +49,30 @@ export default defineComponent({
     /* float: left;
     text-align: center; */
 }
+.dropdown-content {
+    vertical-align: middle;
+    display: table-cell;
+}
+a {
+    text-decoration: none;
+}
+.dropdown-title{
+    color: #00a7ee;
+    font-weight:bold;
+}
+.dropdown-paragraph{
+    color: #2e3233;
+    font: 1.3rem;
+}
 /* dropdown container */
 .dropdown {
-    float: left;
-    overflow: hidden;
+    position:absolute;
+    display: table;
+    background:white;
+    padding: 48px 64px 130px;
+    z-index: 0;
+    width: 100vw;
+    right: 0;
 }
 
 /* add background to navtab on hover */
@@ -63,8 +82,12 @@ a:hover {
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
+    color: blue;
     /* display: none; */
     /* position: absolute; */
-    z-index: 1;
+}
+
+router-link{
+    text-decoration: none;
 }
 </style>

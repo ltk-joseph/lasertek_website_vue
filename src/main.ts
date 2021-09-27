@@ -12,9 +12,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas);
 
+/* Creating a Vue JS app with:
+    multi-languge support (i18n)
+    state (store)
+    url changing (router)
+    icons (fontAwesome)
+*/
 createApp(App)
-.use(i18n)
-.use(store)
-.use(router)
-.component('fa', FontAwesomeIcon)
-.mount('#app')
+    .use(i18n)
+    .use(store)
+    .use(router)
+    .component('fa', FontAwesomeIcon)
+    .mount('#app')

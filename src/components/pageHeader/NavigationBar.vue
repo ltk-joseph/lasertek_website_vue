@@ -1,5 +1,5 @@
 <template>
-    <div class="navBar">
+    <nav class="navBar">
         <NavigationTab 
             :reference=aboutsTab.refernece
             :subHeading=aboutsTab.subHeading>
@@ -33,7 +33,7 @@
             :reference=staffTab.refernece
             :subHeading=staffTab.subHeading>
         </NavigationTab> 
-    </div>
+    </nav>
 </template>
 
 <script lang="ts">
@@ -47,6 +47,7 @@ export default defineComponent({
     },
     data() {
         return {
+            titleClicked: false,
             aboutsTab: {
                 refernece: "header.abouts",
                 subHeading: ["aboutUs", "history", "retrospect", "team", "locations", "certifications"]
@@ -96,8 +97,16 @@ export default defineComponent({
 
 <style scoped>
 .navBar {
-  overflow: hidden;
-  margin-top: 3%;
+    position:static;
+    padding: 60px 50px 0px 0px;
+    max-height: inherit;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    text-align: right;
+    background: transparent;
+    bottom: 0;
 }
 .navBar a.router-link-exact-active {
   color: #db1313;

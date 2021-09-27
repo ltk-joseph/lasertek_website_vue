@@ -12,8 +12,6 @@
                         <p> {{$t([reference, '.', dept.department ,'.subDepartment[', index ,'].subProducts[',i - 1,']'].join(''))}}</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
         <fa icon ="chevron-right" v-if="isClicked"/>
@@ -46,3 +44,28 @@ export default defineComponent({
     }
 })
 </script>
+<style scoped>
+
+/* links inside the navbar */
+.navtab {
+    /* float: left;
+    text-align: center; */
+}
+/* dropdown container */
+.dropdown {
+    position:fixed;
+    display: block;
+    background:yellow;
+    padding: 48px 64px 130px;
+    z-index: 0;
+}
+
+/* add background to navtab on hover */
+a:hover {
+    color: crimson;
+}
+
+router-link{
+    text-decoration: none;
+}
+</style>
