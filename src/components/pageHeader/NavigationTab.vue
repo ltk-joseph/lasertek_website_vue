@@ -4,6 +4,7 @@
         <ul class="dropdown" v-if="isClicked">
             <li class="dropdown-content" v-for="item in getSubHeading" :key="item">
                 <router-link :to="item">
+                    <img :src="require('@/assets/images/navigationBar/' + $t([reference, '.',item,'.icon'].join(''))).default" alt="image cant be displayed"/>
                     <h3 class="dropdown-title">{{ $t([reference, ".",item,".heading"].join('')) }} </h3>
                     <p class="dropdown-paragraph">{{ $t([reference, ".",item,".details"].join('')) }} </p>
                 </router-link>

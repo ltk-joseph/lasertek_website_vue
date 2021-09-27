@@ -3,26 +3,32 @@
     "abouts": {
       "mainHeading": "關於雷科",
       "aboutUs": {
+        "icon": "公司簡介.svg",
         "heading": "公司簡介",
         "details": "雷科成立日期｜資本額｜地址"
       },
       "history": {
+        "icon": "公司沿革.svg",
         "heading": "公司沿革",
         "details": "雷科年代大事件記事"
       },
       "retrospect": {
+        "icon": "公司願景.svg",        
         "heading": "公司願景",
         "details": "使命｜價值觀｜公司文化｜品質政策"
       },
       "team": {
+        "icon": "經營團隊.svg",     
         "heading": "經營團隊",
         "details": "董事長, 總經理簡介"
       },
       "locations": {
+        "icon": "營業據點.svg",       
         "heading": "營業據點",
         "details": "全球辦公室聯絡方式"
       },
       "certifications": {
+        "icon": "企業認證.svg",
         "heading": "企業認證",
         "details": "ISO, 企業獲獎認證"
       }
@@ -130,14 +136,17 @@
     "social_responsibilities": {
       "mainHeading": "社會責任",
       "social_involvements": {
+        "icon": "社會參與.svg",
         "heading": "社會參與",
         "details": "雷科ＣＳＲ企業社會責任"
       },
       "stakeholder": {
+        "icon": "利害關係人.svg",
         "heading": "利害關係人",
         "details": "利害關係人、檢舉信箱、檢舉窗口"
       },
       "csr_report": {
+        "icon": "CSR報告.svg",
         "heading": "CSR報告",
         "details": "CSR報告揭露與利害關係人"
       }
@@ -145,18 +154,22 @@
     "investment_services": {
       "mainHeading": "投資服務",
       "financial_information": {
+        "icon": "財務資訊.svg",
         "heading": "財務資訊",
         "details": "財務資訊、股價、股利"
       },
       "shareholders_information": {
+        "icon": "股東會資料.svg",
         "heading": "股東會資料",
         "details": "年報、開會通知＆檔案下載"
       },
       "investment_service": {
+        "icon": "投資服務窗口.svg",
         "heading": "投資服務窗口",
         "details": "投資諮詢聯絡方式"
       },
       "investment_q_n_a": {
+        "icon": "問答集.svg",
         "heading": "問答集",
         "details": "公司相關資訊Ｑ＆Ａ"
       }
@@ -164,18 +177,22 @@
     "management": {
       "mainHeading": "公司治理",
       "corporate_structure": {
+        "icon": "公司治理架構.svg",
         "heading": "公司治理架構",
         "details": "董事會為雷科公司治理組織架構"
       },
       "boards": {
+        "icon": "董事會.svg",
         "heading": "董事會",
         "details": "組織職責、董事長績效評估、重要決議"
       },
       "internal_audit": {
+        "icon": "內部稽核.svg",
         "heading": "內部稽核",
         "details": "內部稽核為獨立單位，直接隸屬董事會"
       },
       "corporate_information": {
+        "icon": "相關規則與資訊.svg",
         "heading": "相關規則與資訊",
         "details": "公司相關章程與守則、辦法說明"
       }
@@ -183,30 +200,37 @@
     "hr": {
       "mainHeading": "人資專區",
       "hr_policy": {
+        "icon": "人權政策.svg",
         "heading": "人權政策",
         "details": "保障勞工組織與集體談判的權力"
       },
       "welfare": {
+        "icon": "福利薪酬.svg",
         "heading": "福利薪酬",
         "details": "分紅/年終獎金/福利金補助/節日獎金"
       },
       "training_development": {
+        "icon": "培育與發展.svg",
         "heading": "培育與發展",
         "details": "公司提供完整的訓練規劃"
       },
       "retirement": {
+        "icon": "退休制度.svg",
         "heading": "退休制度",
         "details": "依「勞動基準法」規定實行"
       },
       "hr_faq": {
+        "icon": "常見問題.svg",
         "heading": "常見問題",
         "details": "相關工作規定與下載地圖"
       },
       "job_opportunities": {
+        "icon": "現有職缺.svg",
         "heading": "現有職缺",
         "details": "詳情請至104、1111、EMAIL"
       },
       "interview_process": {
+        "icon": "招募流程.svg",
         "heading": "招募流程",
         "details": "雷科招募人員流程說明"
       }
@@ -214,26 +238,32 @@
     "staff": {
       "mainHeading": "員工專區",
       "mail": {
+        "icon": "員工webmail.svg",
         "heading": "員工webmail",
         "details": "雷科網路郵局WEBEMAIL"
       },
       "overseas_video": {
+        "icon": "國外旅遊.svg",
         "heading": "國外旅遊",
         "details": "國外員工旅遊影片"
       },
       "domestic_video": {
+        "icon": "國內旅遊.svg",
         "heading": "國內旅遊",
         "details": "國內員工旅遊影片"
       },
       "employee_factory_day": {
+        "icon": "家庭日&廠慶.svg",
         "heading": "家庭日&廠慶",
         "details": "廠慶活動紀錄影片"
       },
       "year_end_event": {
+        "icon": "年終尾牙.svg",
         "heading": "年終尾牙",
         "details": "年終活動紀錄影片"
       },
       "other_event": {
+        "icon": "其他活動.svg",
         "heading": "其他活動",
         "details": "其他公司＆同仁活動"
       }
