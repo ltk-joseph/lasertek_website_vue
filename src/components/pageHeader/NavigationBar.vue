@@ -2,36 +2,50 @@
     <nav class="navBar">
         <NavigationTab 
             :reference=aboutsTab.refernece
-            :subHeading=aboutsTab.subHeading>
+            :subHeading=aboutsTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab>
         <ProductTab 
             :reference=productTab.reference
-            :departments=productTab.departments>
+            :departments=productTab.departments
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </ProductTab>
-        <a>
+        <a class="latestNews" @click="minimiseTab">
             <router-link to="/news">
                 {{ $t("header.news") }}
             </router-link>
         </a>
         <NavigationTab 
             :reference=socialRespTab.refernece
-            :subHeading=socialRespTab.subHeading>
+            :subHeading=socialRespTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab>
         <NavigationTab 
             :reference=investServicesTab.refernece
-            :subHeading=investServicesTab.subHeading>
+            :subHeading=investServicesTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab> 
         <NavigationTab 
             :reference=managementTab.refernece
-            :subHeading=managementTab.subHeading>
+            :subHeading=managementTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab>
         <NavigationTab 
             :reference=humanResourceTab.refernece
-            :subHeading=humanResourceTab.subHeading>
+            :subHeading=humanResourceTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab>
         <NavigationTab 
             :reference=staffTab.refernece
-            :subHeading=staffTab.subHeading>
+            :subHeading=staffTab.subHeading
+            :isClicked=isClicked
+            @clickedTab="onClickedTab">
         </NavigationTab> 
     </nav>
 </template>
@@ -45,9 +59,18 @@ export default defineComponent({
     components: {
         NavigationTab, ProductTab
     },
+    methods: {
+        onClickedTab(reference: string){
+            console.log("on ClickedTab Triggered");
+            this.isClicked = reference;
+        },
+        minimiseTab(){
+            this.isClicked = "";
+        }
+    },
     data() {
         return {
-            titleClicked: false,
+            isClicked: "",
             aboutsTab: {
                 refernece: "header.abouts",
                 subHeading: ["aboutUs", "history", "retrospect", "team", "locations", "certifications"]
@@ -110,6 +133,13 @@ export default defineComponent({
 }
 .navBar a.router-link-exact-active {
   color: #db1313;
+}
+.latestNews{
+    margin-left: 35px;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* add background to navtab on hover */

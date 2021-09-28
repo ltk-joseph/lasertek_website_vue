@@ -1,7 +1,7 @@
 <template>
-    <a class="prodTab" @click="isClicked = !isClicked">
+    <a class="prodTab" @click="toggleClicked">
         <a>{{ $t(getMainHeader) }} </a>
-        <div class="dropdown" v-if="isClicked">
+        <div class="dropdown" v-if="isClicked == reference">
             <div class="dropdown-content" v-for="dept in getDepartment" :key="dept">
                 <router-link :to="dept.department">
                     <h3>{{ $t([reference, ".", dept.department, ".subHeading"].join('')) }} </h3>
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <fa icon ="chevron-right" v-if="isClicked"/>
+        <fa icon ="chevron-right" v-if="isClicked == reference"/>
         <fa icon ="chevron-down" v-else/>
     </a>
 </template>
@@ -25,7 +25,17 @@ export default defineComponent({
     name: "ProductTab",
     props: {
         reference: String,
-        departments: Array
+        departments: Array,
+        isClicked: String
+    },
+    methods: {
+        toggleClicked() {
+            if(this.isClicked != this.reference){
+                this.$emit("clickedTab", this.reference)
+            } else {
+                this.$emit("clickedTab", "")
+            }
+        }
     },
     computed: {
         getMainHeader(): string {
@@ -39,25 +49,39 @@ export default defineComponent({
     },
     data() {
         return {
-            isClicked: false
         }
     }
 })
 </script>
 <style scoped>
-
-/* links inside the navbar */
-.navtab {
-    /* float: left;
-    text-align: center; */
+.prodTab {
+    margin-left: 35px;
+}
+.dropdown-content {
+    vertical-align: middle;
+    display: table-cell;
+    color: blue;
+}
+a {
+    text-decoration: none;
+}
+.dropdown-title{
+    color: #00a7ee;
+    font-weight:bold;
+}
+.dropdown-paragraph{
+    color: #2e3233;
+    font: 1.3rem;
 }
 /* dropdown container */
 .dropdown {
-    position:fixed;
-    display: block;
-    background:yellow;
+    position:absolute;
+    display: table;
+    background:white;
     padding: 48px 64px 130px;
     z-index: 0;
+    width: 100vw;
+    right: 0;
 }
 
 /* add background to navtab on hover */

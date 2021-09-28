@@ -1,7 +1,7 @@
 <template>
-    <a class="navtab" @click="isClicked = !isClicked">
+    <a class="navTab" @click="toggleClicked">
         {{ $t(getMainHeader) }}
-        <ul class="dropdown" v-if="isClicked">
+        <ul class="dropdown" v-if="isClicked == reference">
             <li class="dropdown-content" v-for="item in getSubHeading" :key="item">
                 <router-link :to="item">
                     <img :src="require('@/assets/images/navigationBar/' + $t([reference, '.',item,'.icon'].join(''))).default" alt="image cant be displayed"/>
@@ -10,7 +10,7 @@
                 </router-link>
             </li>
         </ul>
-        <fa icon ="chevron-right" v-if="isClicked"/>
+        <fa icon ="chevron-right" v-if="isClicked == reference"/>
         <fa icon ="chevron-down" v-else/>
     </a>
 </template>
@@ -22,9 +22,19 @@ export default defineComponent({
     name: "NavigationTab",
     props: {
         reference: String,
-        subHeading: Array
+        subHeading: Array,
+        isClicked: String
     },
-
+    emits: ["clickedTab"],
+    methods: {
+        toggleClicked() {
+            if(this.isClicked != this.reference){
+                this.$emit("clickedTab", this.reference)
+            } else {
+                this.$emit("clickedTab", "")
+            }
+        }
+    },
     computed: {
         getMainHeader(): string {
             if (!this.reference) return "headerNotFound";
@@ -37,22 +47,19 @@ export default defineComponent({
     },
     data() {
         return {
-            isClicked: false
         }
     }
 })
 </script>
 
 <style scoped>
-
-/* links inside the navbar */
-.navtab {
-    /* float: left;
-    text-align: center; */
+.navTab {
+    margin-left: 35px;
 }
 .dropdown-content {
     vertical-align: middle;
     display: table-cell;
+    color: blue;
 }
 a {
     text-decoration: none;
@@ -79,13 +86,6 @@ a {
 /* add background to navtab on hover */
 a:hover {
     color: crimson;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    color: blue;
-    /* display: none; */
-    /* position: absolute; */
 }
 
 router-link{
